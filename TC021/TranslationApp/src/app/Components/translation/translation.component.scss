@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+
+    .translation-box-wrapper {
+        width: 40%;
+    }
+
+    .translation-text {
+        width: 100%;
+        min-height: 256px;
+        border: 1px solid gray;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        margin-top: 8px;
+    }
+
+    .input-text {
+        overflow: auto;
+        outline: none;
+    
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    
+        resize: none;
+    }
+}

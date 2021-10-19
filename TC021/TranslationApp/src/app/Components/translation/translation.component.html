@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="translation-box-wrapper">
+        <h3>{{ originalLang }}</h3>
+        <textarea #translationBox id="translation-box" class="translation-text input-text" placeholder="{{placeholder}}" (input)="translate(translationBox.value)"></textarea>
+    </div>
+    <div class="translation-box-wrapper">
+        <h3>{{ targetLang }}</h3>
+        <div class="translation-text result-text" *ngIf="result$ | async as result; else emptyDiv">{{ result.translation }}</div>
+        <ng-template #emptyDiv>
+            <div class="translation-text result-text"></div>
+        </ng-template>
+    </div>
+</div>
