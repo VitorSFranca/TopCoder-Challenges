@@ -1,0 +1,9 @@
+<div id="list" class="container-fluid">
+    <h2 title="My Treasure">My Treasure</h2>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let treasure of treasures" (click)="onClickTreasure(treasure)">
+            <span>{{treasure.name}}</span>
+        </li>
+        </ul>    
+</div>
+<hr class="divider">

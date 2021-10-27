@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  title = 'Topcoder Angular Level 2';
+  title = 'Topcoder Angular Level 3';
 
   constructor() { }
 

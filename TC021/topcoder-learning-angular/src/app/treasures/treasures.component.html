@@ -1,4 +1,4 @@
-<div id='treasure-details' class='container-fluid'>
+<div id='treasure-details' class='container-fluid' *ngIf="treasure$ | async as treasure">
     <ul class="list-group">
         <h3>{{treasure.name}} Details</h3>
         <li class="list-group-item">

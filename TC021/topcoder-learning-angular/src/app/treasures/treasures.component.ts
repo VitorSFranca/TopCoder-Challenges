@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { treasures } from '../mock-treasures';
+import { Observable } from 'rxjs';
+import { TREASURES } from '../mock-treasures';
+import { TreasureService } from '../services/treasure.service';
 import { Treasure } from './treasures';
 
 @Component({
@@ -9,11 +11,11 @@ import { Treasure } from './treasures';
 })
 export class TreasuresComponent implements OnInit {
 
-  treasure!: Treasure;
-  constructor() { }
+  treasure$!: Observable<Treasure>;
+  constructor(private treasureService: TreasureService) { }
 
   ngOnInit(): void {
-    this.treasure = treasures[0];
+    this.treasure$ = this.treasureService.onSelectTreasure();
   }
 
 }
